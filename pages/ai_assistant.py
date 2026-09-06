@@ -1,6 +1,6 @@
 """
 pages/ai_assistant.py
-Conversational AI assistant powered by Google Gemini 2.5 Flash.
+Conversational AI assistant powered by Google Gemini 3.6 Flash.
 API key is read from st.secrets["GEMINI_API_KEY"] or entered manually.
 """
 
@@ -94,13 +94,13 @@ def render():
 
 
 def _call_gemini(api_key: str, user_message: str) -> str:
-    """Send a message to Gemini 2.5 Flash and return the text reply."""
+    """Send a message to Gemini 3.6 Flash and return the text reply."""
     try:
         import google.generativeai as genai  # type: ignore
 
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel(
-            model_name="gemini-2.5-flash",
+            model_name="gemini-3.6-flash",
             system_instruction=_build_system_prompt(),
         )
 

@@ -67,7 +67,7 @@ def _sidebar():
         st.markdown(f"- **No-Shows:** {noshow_total} ({noshow_total/total*100:.1f}%)" if total else "- **No-Shows:** 0")
 
         st.divider()
-        st.caption("Built with Streamlit · Gemini 2.5 Flash · scikit-learn")
+        st.caption("Built with Streamlit · Gemini 3.6 Flash · scikit-learn")
 
     return nav
 
